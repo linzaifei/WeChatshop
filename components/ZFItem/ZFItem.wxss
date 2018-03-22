@@ -1,0 +1,21 @@
+/* components/ZFItem/ZFItem.wxss */
+
+.item{
+  display: flex;
+  background-color: white;
+  align-items: center;
+  padding: 10rpx 0rpx;
+}
+
+.item_left text{
+  margin-top: 10rpx;
+  display: block;
+  margin-left: 20rpx;
+}
+
+.item_right{
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+   padding-right: 20rpx; 
+}

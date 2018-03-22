@@ -1,0 +1,30 @@
+
+var arr = [
+  { "iconName": "order1", "title": "待付款" },
+  { "iconName": "order2", "title": "待使用" },
+  { "iconName": "order3", "title": "待评价" },
+  { "iconName": "order4", "title": "退款/售后" }
+];
+
+var titleArr = [
+    { 'number': '100', 'title': '收藏圈' },
+    { 'number': '200', 'title': '评价' }, 
+    { 'number': '50', 'title': '收藏' }
+   ];
+
+   var headerMsg = {
+     headerName:'/images/123.jpg',
+     name: '我的商城',
+     VName: '/images/avatar_vip@2x.png',
+   }
+
+
+module.exports = {
+  orders:arr,
+  headerArr: titleArr,
+  msg: headerMsg,
+};
+
+
+
+

@@ -1,0 +1,128 @@
+<wxs src="home.wxs" module="home" />
+
+<scroll-view>
+  <view class='main'>
+    <!-- 菜单栏 -->
+    <view class='menu'>
+      <swiper indicator-dots="true" indicator-active-color="orange">
+        <block wx:for="{{home.titleData.data}}" wx:for-index="idx" wx:for-item="homeItem" wx:key="*this">
+          <swiper-item>
+            <view class='menu_item'>
+              <block wx:for="{{homeItem}}" wx:key="{{index}}">
+                <view class='menu_item_sub' data-idx="{{idx}}" data-key="{{index}}" catchtap='menuAction'>
+                  <image class='menu_item_sub_img' src="{{'/images/'+item.image+'@2x.png'}}"></image>
+                  <text class='menu_item_sub_title'>{{item.title}}</text>
+                </view>
+              </block>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <!-- 中部菜单模块-->
+    <view class='middle'>
+      <!-- 中部-左边-->
+      <view class='middle_left'>
+        <image class='middle_left_img1' src="{{'/images/'+home.middleData.dataLeft[0].img1+'@2x.png'}}"></image>
+        <image class='middle_left_img2' src="{{'/images/'+home.middleData.dataLeft[0].img2+'@2x.png'}}"></image>
+        <text>{{home.middleData.dataLeft[0].title}}</text>
+        <view class='middle_left_bottom'>
+          <text>{{home.middleData.dataLeft[0].price}}</text>
+          <text>{{home.middleData.dataLeft[0].sale}}</text>
+        </view>
+      </view>
+
+      <!-- 中部-右边-->
+      <view class='middle_right'>
+        <block wx:for="{{home.middleData.dataRight}}" wx:key="{{index}}">
+          <ZFItem text_title='{{item.title}}' detail_title="{{item.subTitle}}" img_path="{{'/images/'+item.rightImage+'@2x.png'}}" text_color='{{item.titleColor}}' />
+        </block>
+      </view>
+
+    </view>
+
+    <!-- 中部-下部菜单模块-->
+    <view class='middle_bottom'>
+      <ZFItem text_title='最高立减25' detail_title="报名参加" img_path="/images/yyms@2x.png" text_color='#ffa500' itemWidth="100vw" />
+
+      <view class='middle_bottom_item'>
+        <block wx:for="{{home.middle_bottomData.data}}" wx:key="{{index}}">
+          <ZFItem text_title='{{item.maintitle}}' detail_title="{{item.deputytitle}}" img_path="/images/yyms@2x.png" text_color='{{item.typeface_color}}' itemWidth="49.69vw" top="1rpx" />
+        </block>
+      </view>
+    </view>
+
+    <!-- shop-->
+    <view class='shop'>
+      <ZFSelectItem titleIcon="/images/gwzx@2x.png" title="购物中心" detail="{{home.shopData.tips}}" />
+      <scroll-view scroll-x="true" class='shop_scoll'>
+        <block wx:for="{{home.shopData.data}}" wx:key="{{index}}">
+          <view class='shop_scoll_item'>
+
+            <image src="{{item.img}}">
+              <text>{{item.showtext.text}}</text>
+            </image>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+
+    <!-- -hot-->
+    <view class='hot'>
+      <ZFSelectItem titleIcon="/images/gwzx@2x.png" title="热门频道" detail="查看全部" />
+      <!--hot_top  -->
+      <view class='hot_top'>
+        <block wx:for="{{home.hotData.topData}}" wx:key="{{index}}">
+          <view class='hot_top_item'>
+            <view class='hot_top_item_left'>
+              <text>{{item.title}}</text>
+              <text>{{item.subTitle}}</text>
+              <image src="/images/icon_hot.png"></image>
+            </view>
+            <view class='hot_top_item_right'>
+              <image src="{{'/images/'+item.hotImage+'.png'}}"></image>
+            </view>
+          </view>
+        </block>
+      </view>
+      <!--hot_bottom  -->
+      <view class='hot_bottom'>
+        <block wx:for="{{home.hotData.bottomData}}" wx:key="{{index}}">
+          <view class='hot_bottom_item'>
+            <text>{{item.title}}</text>
+            <text>{{item.subTitle}}</text>
+            <image src="{{'/images/'+item.hotImage+'.png'}}"></image>
+          </view>
+        </block>
+      </view>
+    </view>
+    <!-- love-->
+    <view class='love'>
+      <ZFSelectItem titleIcon="/images/cnxh@2x.png" title="猜你喜欢" />
+      <block wx:for="{{home.loveData.data}}" wx:key="{{index}}">
+
+        <view class='love_item'>
+          <image src="http://d.hiphotos.baidu.com/image/pic/item/eac4b74543a98226d4e2c5e78382b9014b90ebcb.jpg"></image>
+          <view class='love_item_right'>
+          <!--右上  -->
+            <view class='love_item_right_top'>
+              <text style="color:{{item.color.title}}">{{item.title}}</text>
+              <text style="color:{{item.color.subTitle}}">{{item.topRightInfo}}</text>
+            </view>
+            <!--右中  -->
+            <text class='love_item_right_text' style="color:{{item.color.subTitle}}">{{item.subTitle}}</text>
+             <view class='love_item_right_top love_item_right_bottom'>
+              <text style="color:{{item.color.mainMessage}}">{{item.mainMessage +item.mainMessage2}}</text>
+              <text style="color:{{item.color.bottomRightInfo}}">{{item.bottomRightInfo}}</text>
+            </view>
+          </view>
+        </view>
+
+      </block>
+
+    </view>
+
+  </view>
+
+</scroll-view>

@@ -1,0 +1,1 @@
+ <live-pusher url="rtmp://192.168.60.218:1938/gateway/123456"  mode="RTC" autopush enable-camera="true" bindstatechange="statechange" binderror="binderrorAction" style="width: 300px; height: 225px;" />

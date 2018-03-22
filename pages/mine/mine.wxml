@@ -1,0 +1,57 @@
+<wxs src="mine.wxs" module="mine" />
+
+<view class="main">
+
+  <!--头试图标签  -->
+  <view class='header'>
+    <!--头试图上部分  -->
+    <view class='header_top'>
+      <!--左边  -->
+      <view class='header_top_left'>
+        <image class='header_top_left_img' src='{{mine.msg.headerName}}'></image>
+        <text>{{mine.msg.name}}</text>
+        <image class='header_top_left_img_2' src='{{mine.msg.VName}}'></image>
+      </view>
+      <!--右边  -->
+      <view class='header_top_right'>
+        <image class='back' src='../../images/icon_cell_rightArrow@2x.png'></image>
+      </view>
+    </view>
+    <!--头试图下部分  -->
+    <view class='header_bottom'>
+
+      <block wx:for="{{mine.headerArr}}" wx:key="{{index}}">
+        <view class='header_bottom_item'>
+          <text class='header_bottom_item_nub'>{{item.number}}</text>
+          <text class=''>{{item.title}}</text>
+        </view>
+      </block>
+    </view>
+
+  </view>
+
+  <!--订单详情试图  -->
+  <view class='center'>
+    <ZFSelectItem titleIcon='/images/collect@2x.png' title="我的订单" detail="查看所有订单" />
+    <view class="order">
+      <block wx:for="{{mine.orders}}" wx:key="{{index}}">
+        <view class='order_item' data-key="{{index}}" catchtap='orderAction'>
+          <image src="{{'../../images/'+item.iconName+'@2x.png'}}"></image>
+          <text class='order_item_title'>{{item.title}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!--cell  -->
+  <view class='bottom'>
+    <ZFSelectItem titleIcon='/images/draft@2x.png' title="钱包" detail="账户余额：￥100" />
+    <ZFSelectItem titleIcon='/images/like@2x.png' title="抵用券" detail="10张" />
+    <ZFSelectItem titleIcon='/images/card@2x.png' title="积分商城" />
+    <ZFSelectItem titleIcon='/images/new_friend@2x.png' title="今日推荐" detailIcon='/images/me_new@2x.png' />
+    <ZFSelectItem titleIcon='/images/draft@2x.png' title="我要合作" detail="轻松开店招财进宝" />
+
+  </view>
+
+
+</view>

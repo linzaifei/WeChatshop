@@ -1,0 +1,21 @@
+<!--components/ZFSelectItem/ZFSelectItem.wxml-->
+
+<view class='itemCell'>
+<!--左边  -->
+  <view class='left'>
+  <image wx:if="{{titleIcon}}" class='titleIcon' src="{{titleIcon}}"></image>
+  <text>{{title}}</text>
+  </view>
+  <!--右边  -->
+  <view class='right' wx:if="{{! isSwith}}">
+      <view class='right_item'>
+         <image wx:if="{{titleIcon}}" class='right_item_img' src="{{detailIcon}}"></image> 
+        <text wx:if="{{detail}}">{{detail}}</text>
+      </view>
+    <image class='back' src='../../images/icon_cell_rightArrow@2x.png'></image>
+  </view>
+  <view class='right' wx:else>
+  <switch class='switch' />
+  </view>
+</view>
+<view wx:if="{{isLine}}" class='line'></view>

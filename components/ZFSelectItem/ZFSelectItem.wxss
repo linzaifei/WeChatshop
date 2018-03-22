@@ -1,0 +1,51 @@
+/* components/ZFSelectItem/ZFSelectItem.wxss */
+
+.itemCell{
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+/*左边  */
+.left{
+  padding: 20rpx 15rpx;
+  color: #333;
+  font-size: 35rpx;
+  display: flex;
+  align-items: center;
+}
+.titleIcon{
+width: 50rpx;
+height: 50rpx;
+border-radius: 50%;
+margin-right: 15rpx;
+}
+/*右边  */
+.right{
+  display: flex;
+  flex: 1;
+  font-size: 32rpx;
+  color: #999;
+  align-items: center;
+  justify-content: flex-end  
+}
+.right .right_item{
+  display: flex;
+  margin-right: 20rpx; 
+}
+.right_item_img{
+  height: 30rpx;
+  width: 40rpx;
+}
+.right .back{
+  width: 25rpx;
+  height: 35rpx;
+  margin-right: 15rpx;
+}
+
+.switch{
+   margin-right: 10rpx;
+}
+.line{
+height: 1rpx;
+color: #ddd;
+}

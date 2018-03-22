@@ -1,0 +1,17 @@
+
+Page{
+  background-color: #f2f2f2;
+}
+
+.top{
+  margin-top: 20prx;
+}
+.center{
+  margin-top: 10rpx;
+}
+.center_bottom{
+  margin-top: 10rpx;
+}
+.bottom{
+  margin-top: 10rpx;
+}

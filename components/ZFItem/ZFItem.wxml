@@ -1,0 +1,11 @@
+<!--components/ZFItem/ZFItem.wxml-->
+
+<view class='item'style="width:{{itemWidth}};border-top:{{top}} solid #f2f2f2" >
+  <view class='item_left'>
+  <text style="color:{{text_color}};font-size:{{text_size}}">{{text_title}}</text>
+  <text style="color:{{detail_color}};font-size:{{detail_size}}">{{detail_title}}</text>
+  </view>
+  <view class='item_right'>
+    <image src='{{img_path}}' style="height:{{img_height}};width:{{img_width}}" ></image>
+  </view>
+</view>

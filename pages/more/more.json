@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "更多",
+  "usingComponents": {
+    "ZFSelectItem":"/components/ZFSelectItem/ZFSelectItem"
+  }
+}

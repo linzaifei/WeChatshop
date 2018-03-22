@@ -1,0 +1,22 @@
+
+<view  class="main">
+    <view class='top'>
+    <ZFSelectItem bindtap="sysAction" title="扫一扫" />
+    </view>
+    <view class='center'>
+    <ZFSelectItem title="省流量模式" isSwith="false" />
+    <ZFSelectItem title="消息提醒"  />
+    <ZFSelectItem title="邀请好友使用码团"  />
+    <ZFSelectItem title="清空缓存" detail="1.99M"/>
+    </view>
+    <view class='center_bottom'>
+     <ZFSelectItem title="问卷调查" /> 
+     <ZFSelectItem title="支付帮助" /> 
+     <ZFSelectItem title="网络诊断" /> 
+     <ZFSelectItem title="关于码团" /> 
+     <ZFSelectItem title="我要应聘" /> 
+    </view>
+    <view class='bottom'>
+     <ZFSelectItem title="精品应用" /> 
+    </view>
+</view>
